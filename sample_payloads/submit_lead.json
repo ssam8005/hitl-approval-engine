@@ -1,0 +1,11 @@
+{
+  "lead_id": "hs_contact_789012",
+  "lead_name": "Jordan Blake",
+  "company": "Acme SaaS",
+  "title": "VP of Sales",
+  "email": "jordan.blake@acmesaas.com",
+  "linkedin_url": "https://linkedin.com/in/jordanblake",
+  "ai_score": 73.5,
+  "ai_rationale": "Strong ICP fit. Decision-maker title confirmed. Company headcount 45-200 (target range). Visited pricing page 3x in 7 days. Recently raised Series B — active GTM investment signal. No prior contact in CRM.",
+  "source_system": "n8n-lead-scorer-v2"
+}
