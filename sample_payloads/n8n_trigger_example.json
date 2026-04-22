@@ -1,0 +1,26 @@
+{
+  "_comment": "n8n HTTP Request node configuration — POST to HITL Approval Engine",
+  "node_type": "n8n-nodes-base.httpRequest",
+  "parameters": {
+    "method": "POST",
+    "url": "http://your-server:8080/submit",
+    "authentication": "headerAuth",
+    "headerParameters": {
+      "parameters": [
+        { "name": "X-API-Key", "value": "={{ $env.HITL_API_SECRET_KEY }}" },
+        { "name": "Content-Type", "value": "application/json" }
+      ]
+    },
+    "body": {
+      "lead_id": "={{ $json.hs_contact_id }}",
+      "lead_name": "={{ $json.firstname }} {{ $json.lastname }}",
+      "company": "={{ $json.company }}",
+      "title": "={{ $json.jobtitle }}",
+      "email": "={{ $json.email }}",
+      "linkedin_url": "={{ $json.hs_linkedin_url }}",
+      "ai_score": "={{ $json.icp_score }}",
+      "ai_rationale": "={{ $json.score_rationale }}",
+      "source_system": "n8n-intent-scorer-v1"
+    }
+  }
+}
